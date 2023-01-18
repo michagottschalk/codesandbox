@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(250, 250, 250, 1);
+  color: rgba(3, 33, 33, 1);
+  font-family: "Inter", sans-serif;
+}
+
+#flex-header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 1.25em;
+}
+
+#flex-header > nav > a {
+  font-weight: 700;
+  font-kerning: auto;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(3, 33, 33, 1);
+  font-size: 1.5em;
+  padding: 15px;
+}
+
+#flex-header > nav > a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+#container {
+  padding: 40px 5%;
+}
+
+.flex-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.flex-gallery > li {
+  flex-basis: 350px;
+  position: relative;
+  cursor: pointer;
+}
+
+.flex-gallery li img {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(57, 57, 57, 0.502);
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: all 0.2s 0.1s ease-in-out;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-gallery li:hover .overlay {
+  transform: scale(1);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+}
+
+@media only screen and (max-width: 600px) {
+  #flex-header > nav > a {
+    padding-right: 0.5em;
+    font-size: 0.8em;
+  }
+}
